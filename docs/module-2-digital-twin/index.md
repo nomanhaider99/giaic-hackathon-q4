@@ -1,64 +1,92 @@
-# Module 2: Digital Twin - Simulation for Physical AI
+---
+title: Module 2 - Digital Twin Simulation
+sidebar_label: Introduction
+slug: /module-2-digital-twin
+---
+
+# Module 2: Digital Twin Simulation for Humanoid Robotics
 
 ## Overview
-Welcome to Module 2 of the Physical AI and Humanoid Robotics book. This module explores digital twins as the simulation backbone for developing, testing, and validating humanoid robots. Digital twins enable safe, cost-effective development by providing virtual environments where robot behaviors can be tested before deployment on expensive physical hardware.
+
+This module explores digital twin technologies and simulation environments that accelerate humanoid robot development. Digital twins bridge the reality gap by providing safe, cost-effective environments to test algorithms, validate designs, and train AI systems before physical deployment.
+
+Digital twin simulation is a critical component of modern humanoid development pipelines, enabling:
+
+- **Safe testing**: Validate control algorithms without risking expensive hardware
+- **Rapid iteration**: Test multiple design variations efficiently
+- **Scenario training**: Expose robots to diverse situations without physical constraints
+- **System validation**: Verify integration of perception, planning, and control systems
 
 ## Learning Objectives
-After completing this module, you will understand:
-- The fundamental concepts of digital twins in robotics
-- How physics simulation validates humanoid behaviors
-- The tradeoffs between simulation fidelity and computational costs
-- The architecture and implementation of simulation systems (Gazebo and Unity)
-- Sensor simulation and its impact on AI modules
-- How to design effective simulation environments for humanoid robotics
+
+By the end of this module, you should understand:
+
+1. How Gazebo physics simulation models real-world dynamics for humanoid robots
+2. The role of Unity in simulating realistic human-robot interaction scenarios
+3. Techniques for accurate sensor simulation in virtual environments
+4. Validation approaches to ensure simulation-to-reality transfer
+5. Architectural patterns for integrating simulation with ROS 2 systems
 
 ## Module Structure
-This module is organized into several key sections:
 
-1. [Digital Twin Foundations](./digital-twin-foundations.md) - Core concepts of digital twins in robotics
-2. [Simulation Architecture Overview](./simulation-architecture-overview.md) - System architecture of simulation environments
-3. [Definition of Digital Twins in Robotics](./definition-digital-twins.md) - Defining digital twins within the robotics context
-4. [Physics Simulation Role in Humanoid Validation](./physics-simulation-role.md) - The critical role of physics simulation in validating humanoid behaviors
-5. [Simulation Fidelity vs. Computational Cost Tradeoffs](./fidelity-tradeoffs.md) - Balancing simulation fidelity with computational efficiency
-6. [Gazebo Architecture and ROS 2 Integration](./gazebo-architecture.md) - Gazebo architecture and ROS 2 integration
-7. [Physics Simulation Principles in Gazebo](./physics-simulation-principles.md) - Gravity, collisions, friction, and constraints
-8. [Humanoid-Specific Considerations in Simulation](./humanoid-considerations.md) - Balance, contact dynamics, and foot-ground interactions
-9. [Gazebo-ROS Integration Patterns](./gazebo-ros-integration.md) - Time synchronization and data exchange protocols
-10. [Practical Examples and Code Snippets for Gazebo](./gazebo-practical-examples.md) - Configuration examples and implementation patterns
-11. [Unity's Role in Human-Robot Interaction](./unity-hri-role.md) - Unity's role in visualization and human-robot interaction
-12. [Unity vs Gazebo: Rendering vs Physics Simulation](./unity-vs-gazebo-differences.md) - Architectural separation of concerns
-13. [Unity-ROS Communication Patterns](./unity-ros-communication.md) - Communication patterns and data exchange mechanisms
-14. [Practical Examples and Code Snippets for Unity](./unity-practical-examples.md) - Implementation examples for Unity-ROS integration
-15. [Unity-Gazebo Complementarity in Simulation](./unity-gazebo-complement.md) - How Unity complements Gazebo in simulation
-16. [Principles of Sensor Simulation in Digital Twins](./sensor-simulation-principles.md) - Fundamental principles of simulating perception sensors
-17. [LiDAR Simulation in Digital Twins](./lidar-simulation.md) - LiDAR simulation including point cloud generation
-18. [Camera Simulation in Digital Twins](./camera-simulation.md) - Depth and RGB camera simulation
-19. [IMU Simulation in Digital Twins](./imu-simulation.md) - Inertial Measurement Unit simulation
-20. [Noise Modeling in Sensor Simulation](./noise-modeling.md) - Balancing realism with computational performance
-21. [Practical Examples and Code Snippets for Sensor Configurations](./sensor-practical-examples.md) - Implementation examples for sensor simulation
-22. [Impact of Sensor Fidelity on AI Modules](./sensor-fidelity-impact.md) - How sensor fidelity affects downstream AI modules
-23. [End-to-End Data Flow in Digital Twins](./data-flow-walkthrough.md) - Complete data flow from simulated environment to control
-24. [Multi-Simulator Coordination Patterns](./multi-simulator-patterns.md) - Coordination between multiple simulation platforms
-25. [Mapping Simulation Outputs to Real-World Assumptions](./real-world-mapping.md) - Ensuring transferability of learned behaviors
-26. [Digital Twin Architecture Diagram](./digital-twin-architecture-diagram.md) - Complete system architecture for digital twin systems
-27. [Environment Design Principles for Humanoid Navigation](./environment-design-principles.md) - Designing indoor environments for humanoid robots
-28. [Object Placement Guidelines in Simulation Environments](./object-placement-guidelines.md) - Guidelines for placing objects and interaction zones
-29. [Scenario Design for Humanoid Testing](./scenario-design.md) - Scenario-driven tests for navigation, manipulation, and HRI
-30. [Simulator Choice Guide: Gazebo vs Alternatives](./simulator-choice-guide.md) - Guide to choosing between physics simulators
-31. [Architecture Patterns: Single vs Dual-Simulator](./architecture-patterns.md) - Single vs dual-simulator architectural patterns
-32. [Balancing Fidelity and Iteration Speed](./fidelity-iteration-balance.md) - Balancing high-fidelity simulation with faster iteration
-33. [Decision Framework for Simulation Systems](./decision-framework.md) - Framework for making simulation design decisions
-34. [Validation Methods for Digital Twin Systems](./validation-methods.md) - Validation approaches and quality metrics
-35. [Compatibility Checks with ROS 2 Architectures](./compatibility-checks.md) - Compatibility checks between simulation and ROS 2
-36. [Verifying Simulated Outputs for AI Pipelines](./output-verification.md) - Verifying simulated outputs are usable by AI pipelines
-37. [Quality Metrics for Simulation Systems](./quality-metrics.md) - Quality metrics for evaluating simulation systems
+This module contains the following sections:
+
+1. **[Gazebo Physics Simulation for Humanoid Robots](./gazebo-physics.md)**: Explore Gazebo's physics capabilities for accurately simulating humanoid dynamics and environmental interactions.
+
+2. **[Unity for Human-Robot Interaction in Digital Twins](./unity-hri.md)**: Learn how Unity's rendering and simulation capabilities support human-robot interaction modeling and validation.
+
+3. **[Sensor Simulation for Humanoid Robots in Digital Twins](./sensor-simulation.md)**: Understand techniques for simulating various sensor modalities that humanoid robots rely on for perception.
+
+## Architecture
+
+### Digital Twin Architecture for Humanoid Robotics
+
+```
+Physical Robot ─────┐
+                    │
+                    ▼
+Simulation Environment ←── ROS 2 Bridge
+     │                   │
+     │ (Sensors)         │ (Data Flow)
+     ▼                   ▼
+ Perception ──────→ Control Algorithms
+     │                   │
+     └───────────────────┘
+```
+
+The digital twin architecture enables bidirectional communication between the physical and virtual robots, allowing for safe testing and validation of algorithms before deployment.
+
+### Simulation Pipeline Architecture
+
+```
+World Model (URDF/SDF) → Physics Engine → Sensor Simulation → Visualization → Data Output
+```
+
+This pipeline ensures that simulated sensors produce realistic data that closely matches their physical counterparts.
 
 ## Prerequisites
-Before starting this module, you should have:
-- Basic understanding of robotics and AI concepts
-- Familiarity with ROS 2 concepts (covered in Module 1)
 
-## References
-- Kritzinger, W., Karner, M., Traar, G., Henjes, J., & Sihn, W. (2018). Digital Twin in manufacturing: A categorical literature review and classification. IFAC-PapersOnLine, 51(11), 1016-1022.
-- Coumans, E., & Bai, Y. (2016). Mujoco: A physics engine for model-based control. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).
-- Tedrake, R. (2009). Underactuated Robotics: Algorithms for Walking, Running, Swimming, Flying, and Manipulation. MIT Course Notes.
+Before starting this module, ensure you have a solid understanding of:
+
+- ROS 2 fundamentals (covered in Module 1)
+- Basic concepts of robot kinematics and dynamics
+- Understanding of sensor types commonly used in robotics
+
+## Integration with Other Modules
+
+This module builds on the ROS 2 fundamentals from [Module 1: ROS 2 Architecture](/docs/module-1-ros2/), particularly the concepts of nodes, topics, and services that enable communication between simulation and control systems. The `rclpy` concepts from [Python-ROS 2 Integration](/docs/module-1-ros2/python-rclpy-integration) are especially relevant when implementing ROS interfaces for simulation plugins.
+
+The simulation techniques learned here will be essential when implementing AI perception and navigation systems in Module 3.
+
+The concepts in this module will be critical when working with NVIDIA Isaac in Module 3, where simulation provides training data for AI systems and validates perception algorithms before real-world deployment.
+
+## Duration
+
+This module is estimated to take 8-10 hours to complete, depending on your familiarity with simulation environments.
+
+## Next Steps
+
+After completing this module, continue with:
+
+- Module 3: AI Perception and Navigation with NVIDIA Isaac
+- Module 4: Vision-Language-Action Integration

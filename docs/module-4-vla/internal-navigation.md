@@ -25,7 +25,7 @@ This document outlines the internal navigation links between related sections wi
 - [Voice-to-Text Pipeline](./voice-to-text-pipeline.md) connects to:
   - [Speech Recognition Role](./speech-recognition-role.md)
   - [ASR Integration Patterns](./asr-integration-patterns.md)
-  - [Latency and Accuracy Considerations](./latency-accuracy-considerations.md)
+  - [Latency and Accuracy Considerations](./latency-accuracy-considerations)
 
 - [Natural Language to Structured Intent](./natural-language-to-structured-intent.md) connects to:
   - [Task Decomposition and Goal Representation](./task-decomposition-goal-representation.md)
@@ -103,7 +103,7 @@ For readers following the complete module:
 For readers focusing on specific topics:
 
 **For Speech Processing**:
-[Speech Recognition Role](./speech-recognition-role.md) → [Voice-to-Text Pipeline](./voice-to-text-pipeline.md) → [ASR Integration Patterns](./asr-integration-patterns.md) → [Latency and Accuracy Considerations](./latency-accuracy-considerations.md)
+[Speech Recognition Role](./speech-recognition-role.md) → [Voice-to-Text Pipeline](./voice-to-text-pipeline.md) → [ASR Integration Patterns](./asr-integration-patterns.md) → [Latency and Accuracy Considerations](./latency-accuracy-considerations)
 
 **For Planning Systems**:
 [Natural Language to Structured Intent](./natural-language-to-structured-intent.md) → [LLM Multi-Step Planning](./llm-multi-step-planning.md) → [Embodiment and Environment Constraints](./embodiment-environment-constraints.md) → [Determinism and Safety Considerations](./determinism-safety-considerations.md)

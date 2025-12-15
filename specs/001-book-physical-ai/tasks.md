@@ -121,18 +121,18 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T035 [P] [US3] Validate all technical claims in Module 3 content have authoritative sources
-- [ ] T036 [P] [US3] Verify citations follow APA format in all Module 3 documents
+- [x] T035 [P] [US3] Validate all technical claims in Module 3 content have authoritative sources
+- [x] T036 [P] [US3] Verify citations follow APA format in all Module 3 documents
 
 ### Implementation for User Story 3
 
-- [ ] T037 [P] [US3] Create speech-to-action.md in docs/module-4-vla/
-- [ ] T038 [P] [US3] Create llm-task-planning.md in docs/module-4-vla/
-- [ ] T039 [P] [US3] Create ros-action-mapping.md in docs/module-4-vla/
-- [ ] T040 [US3] Create index.md as entry point for Module 4 in docs/module-4-vla/
-- [ ] T041 [US3] Add cross-references between Module 4 documents and previous modules
-- [ ] T042 [US3] Include architectural diagrams for VLA pipeline
-- [ ] T043 [US3] Verify all technical claims have authoritative sources
+- [x] T037 [P] [US3] Create speech-to-action.md in docs/module-4-vla/
+- [x] T038 [P] [US3] Create llm-task-planning.md in docs/module-4-vla/
+- [x] T039 [P] [US3] Create ros-action-mapping.md in docs/module-4-vla/
+- [x] T040 [US3] Create index.md as entry point for Module 4 in docs/module-4-vla/
+- [x] T041 [US3] Add cross-references between Module 4 documents and previous modules
+- [x] T042 [US3] Include architectural diagrams for VLA pipeline
+- [x] T043 [US3] Verify all technical claims have authoritative sources
 
 **Checkpoint**: All user stories should now be independently functional
 

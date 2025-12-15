@@ -28,6 +28,9 @@ const sidebars = {
       label: 'Module 2: Digital Twin - Simulation for Physical AI',
       items: [
         'module-2-digital-twin/index',
+        'module-2-digital-twin/gazebo-physics',
+        'module-2-digital-twin/unity-hri',
+        'module-2-digital-twin/sensor-simulation',
       ],
     },
     {
@@ -42,6 +45,15 @@ const sidebars = {
       label: 'Module 4: Vision-Language-Action - Connecting Language to Physical Action',
       items: [
         'module-4-vla/index',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Capstone: Autonomous Humanoid Architecture',
+      items: [
+        'capstone/index',
+        'capstone/autonomous-humanoid-architecture',
+        'capstone/end-to-end-pipeline',
       ],
     },
   ],

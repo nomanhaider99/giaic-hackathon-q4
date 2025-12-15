@@ -23,7 +23,7 @@ This module is organized into several key sections:
 4. [Speech Recognition Role](./speech-recognition-role.md) - Role of speech recognition in humanoid interaction
 5. [Voice-to-Text Pipeline](./voice-to-text-pipeline.md) - Voice-to-text pipeline assumptions and constraints
 6. [ASR Integration Patterns](./asr-integration-patterns.md) - Integration patterns using ASR systems
-7. [Latency and Accuracy Considerations](./latency-accuracy-considerations.md) - Real-world environment constraints
+7. [Latency and Accuracy Considerations](./latency-accuracy-considerations) - Real-world environment constraints
 8. [Natural Language to Structured Intent](./natural-language-to-structured-intent.md) - Translating commands into structured intent
 9. [Task Decomposition and Goal Representation](./task-decomposition-goal-representation.md) - Task decomposition and goal representation
 10. [Handling Ambiguity](./handling-ambiguity-incomplete-instructions.md) - Managing ambiguous and incomplete instructions
