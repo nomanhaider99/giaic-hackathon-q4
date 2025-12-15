@@ -10,6 +10,8 @@ const sidebars = {
       items: [
         'foundations/physical-ai-overview',
         'foundations/embodiment-constraints',
+        'foundations/implementation-process',
+        'foundations/command-reference',
       ],
     },
     {

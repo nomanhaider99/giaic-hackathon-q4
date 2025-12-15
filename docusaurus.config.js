@@ -73,7 +73,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/nomanhaider99/giaic-hackathon-q4',
             label: 'GitHub',
             position: 'right',
           },
